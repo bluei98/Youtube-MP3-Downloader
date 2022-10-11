@@ -1,0 +1,81 @@
+{
+  "name": "youtube-mp3-downloader",
+  "version": "1.0.0",
+  "author": "CodeSand Lab.",
+  "license": "ISC",
+  "description": "Youtube MP3 Downloader",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build:win64": "electron-builder --win --x64"
+  },
+  "build": {
+    "productName": "Youtube MP3 Downloader",
+    "appId": "com.electron.template",
+    "asar": true,
+    "extraFiles": [],
+    "extraResources": [],
+    "protocols": {
+      "name": "electronTemplate",
+      "schemes": [
+        "eletecton-template"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/icon.ico"
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./resources/icon.icns"
+    },
+    "dmg": {
+      "title": "HelloElectron",
+      "icon": "./resources/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ],
+      "icon": "./resources/linuxicon"
+    },
+    "nsis": {
+      "shortcutName": "Youtube MP3 Downloader",
+      "artifactName": "Youtube MP3 Downloader ${version}.${ext}",
+      "uninstallDisplayName": "Uninstall Youtube MP3 Downloader",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "./resources/installer/",
+      "output": "./dist/",
+      "app": "."
+    }
+  },
+  "dependencies": {
+    "axios": "0.26.1",
+    "cheerio": "*",
+    "ffmpeg-static": "5.1.0",
+    "fluent-ffmpeg": "2.1.2",
+    "iconv-lite": "0.6.3",
+    "jquery": "3.6.0",
+    "moment": "2.29.1",
+    "xlsx": "0.18.3",
+    "ytdl-core": "4.11.2"
+  },
+  "devDependencies": {
+    "electron": "17.1.0",
+    "electron-builder": "22.14.13",
+    "electron-reload": "*"
+  }
+}
