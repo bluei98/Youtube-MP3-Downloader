@@ -15,16 +15,17 @@ nativeTheme.themeSource = 'dark';
 
 function createWindow() {
     const win  = new BrowserWindow({
-        width: 800,
-        height: 320,
+        width: 1280,
+        height: 800,
         icon: path.join(__dirname, 'icon.png'),
         resizable: false,
         // // frame: false,
-        title: '크롤러',
+        title: 'Youtube MP3 Downloader',
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
             enableRemoteModule: true,
+            webviewTag: true,
             preload: path.join(__dirname, 'preload.js')
         },
     });
@@ -47,6 +48,10 @@ function createWindow() {
         nativeTheme.themeSource = 'system'
     });
 }
+
+app.once('ready-to-show', () => {
+    win.maximize()
+})
 
 app.whenReady().then(() => {
     createWindow();
