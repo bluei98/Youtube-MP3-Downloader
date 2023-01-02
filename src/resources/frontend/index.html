@@ -55,17 +55,21 @@
             </div>
         </div>
         <div class="col-6">
-            <table class="table table-sm table-striped">
-            <thead>
-            <tr>
-                <th>Title</th>
-                <th>Progress</th>
-            </tr>
-            </thead>
-            <tbody style="height: 150px; overflow-y: scroll;">
+            <div style="height: 200px; max-height: 200px; overflow-y: auto;" class="mb-3">
+                <table class="table table-sm table-striped" style="font-size: 0.9rem;">
+                <thead>
+                <tr class="sticky-top bg-dark">
+                    <th style="max-width: 94px;">Title</th>
+                    <th class="text-end" style="width: 80px;">Speed</th>
+                    <th class="text-end" style="width: 80px;">Size</th>
+                    <th class="text-end" style="width: 80px;">Progress</th>
+                </tr>
+                </thead>
+                <tbody style="height: 150px; overflow-y: scroll;">
 
-            </tbody>
-            </table>
+                </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div>

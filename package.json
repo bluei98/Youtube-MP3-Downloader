@@ -72,6 +72,7 @@
     "jquery": "3.6.0",
     "moment": "2.29.1",
     "xlsx": "0.18.3",
+    "youtube-mp3-downloader": "^0.7.11",
     "ytdl-core": "4.11.2"
   },
   "devDependencies": {
