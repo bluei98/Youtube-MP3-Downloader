@@ -45,7 +45,11 @@ async function download() {
     let id = youtube_parser(uri);
     if(id) {
         var playlistId = getYoutubePlaylistId(uri);
-        let items = await getPlayList(playlistId);
+        let items = [];
+        if(playlistId) {
+            let items = await getPlayList(playlistId);
+        }
+        
         if(items.length > 0) {
             items.forEach(item => {
                 startDownload(item);
